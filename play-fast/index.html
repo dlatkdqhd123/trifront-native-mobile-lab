@@ -133,7 +133,7 @@ window.nativeActorReport=function(row){
  row.js_heap_bytes=performance.memory?.usedJSHeapSize??null;row.recorded_at=new Date().toISOString();
  row.build=window.__nativeActorBuild;
  window.__nativeActorState=row;
- const status=row.mode==='cpp'?`C++ ${row.unit_batches>0?'작동 중':'대기'} · 호출 ${row.unit_batches}/${row.pose_batches}/${row.sort_batches}`:'GDScript 작동 중';
+ const status=row.mode==='cpp'?`C++ ${row.unit_batches>0?'작동 중':'대기'} · 호출 ${row.unit_batches}/${row.pose_batches}/${row.sort_batches}/${row.shadow_batches??0}`:'GDScript 작동 중';
  document.getElementById('labmetrics').textContent=row.samples?`${status} | ${row.fps.toFixed(1)} FPS · 평균 ${row.mean_ms.toFixed(1)} / p99 ${row.p99_ms.toFixed(1)} ms · ${row.samples}프레임`:`${status} | 워밍업 ${Math.min(5,row.elapsed_s).toFixed(0)}/5초`;
  document.getElementById('labfoot').textContent=`${row.stress?'밀집 진단':'일반 연습'} · tick ${row.tick} · 객체 ${row.objects} · 텍스처 ${(row.texture_bytes/1048576).toFixed(1)} MiB · ${row.browser.crossOriginIsolated?'격리됨':'격리 안 됨'} · 브라우저가 제공하지 않는 메모리는 0/미지원으로 기록됩니다.`;
  if(row.samples>0&&row.build&&document.visibilityState==='visible')try{localStorage.setItem('trifront-native-mobile-'+row.build.source_inventory_sha256.slice(0,12)+'-'+row.build.html_sha256.slice(0,12)+'-'+row.mode+'-'+row.map+'-'+row.stress,JSON.stringify(row))}catch{}
@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 
 		<script src="index.js"></script>
 		<script>
-const GODOT_CONFIG = {"args": [], "canvasResizePolicy": 0, "emscriptenPoolSize": 8, "ensureCrossOriginIsolationHeaders": true, "executable": "index", "experimentalVK": false, "fileSizes": {"index.wasm": 1508095, "index-7fe8ce775ae6.pck": 21494928}, "focusCanvas": true, "gdextensionLibs": ["actor_batch.wasm"], "godotPoolSize": 4, "serviceWorker": "index.service.worker.js", "mainPack": "index-7fe8ce775ae6.pck"};
+const GODOT_CONFIG = {"args": [], "canvasResizePolicy": 0, "emscriptenPoolSize": 8, "ensureCrossOriginIsolationHeaders": true, "executable": "index", "experimentalVK": false, "fileSizes": {"index.wasm": 1508095, "index-7b4af7531f94.pck": 21500172}, "focusCanvas": true, "gdextensionLibs": ["actor_batch-48bcd96d6747.wasm"], "godotPoolSize": 4, "serviceWorker": "index.service.worker.js", "mainPack": "index-7b4af7531f94.pck"};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 

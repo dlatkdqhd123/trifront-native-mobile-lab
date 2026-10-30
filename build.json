@@ -1,18 +1,20 @@
 {
   "engine": "4.7.2-stable",
+  "contract_version": 2,
   "godot_cpp": "27d9dd23c83871e0619fca5dc2cddfbfd69e926a",
   "emscripten": "emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 4.0.11 (d3432e7a2a6585331c94b041973fb16c9f332ce4)",
   "threads": false,
   "sources": {
-    "native/actor_batch/src/actor_batch.cpp": "2d5397c88b1d2146dcba461f3e4fcf25395f60175bcd90acc07c26348683023e",
+    "native/actor_batch/src/actor_batch.cpp": "bec32df26c607a7142a99259c3b16d542cd0eaba35a14a1f5619ea37d4224274",
     "native/actor_batch/SConstruct": "57a60d28ea7353a7e3b4f17b30aeaeb8c19342f3b1634719d5ca3784331b3cd9",
     "native/actor_batch/profile.json": "c0e090117d26d866c294d8253f5d103062771e6818bc5f25470399d6fa668c24",
-    "client/view/native_actor_batch.gd": "3e72820e4cfa703f4d94d72e5c5e70f823228cb0998bd64f7e8d4f3c7383f183",
-    "platform/native_actor/runtime.gd": "8eaf3b0f0493d285a21b409a50561d19d0934e9034b3d5e3732ddae388f79476"
+    "client/view/native_actor_batch.gd": "38d3c865a3f0791dc21005b0bbc11972481e061d3a49eefefa9e77d1748ec91c",
+    "platform/native_actor/runtime.gd": "fd460f8b79bba30621a8ac3dec7a9cc6bbe8c6d4b7ea3ec0079780ecd13f837c"
   },
-  "wasm_sha256": "b06e584bf8e6957891f3bda7611bc86609c1dfdeac01ec637ed2963cff267bef",
+  "wasm_sha256": "48bcd96d674777399caa29901b69b70e1d3e029bf970baa278b2433b6500805f",
+  "native_library": "actor_batch-48bcd96d6747.wasm",
   "play_path": "play-fast/",
-  "main_pack": "index-7fe8ce775ae6.pck",
+  "main_pack": "index-7b4af7531f94.pck",
   "asset_selection": {
     "registered_files": 408,
     "included_art": 407,
@@ -29,8 +31,8 @@
     "release": "555acaddcfde759a431f326a244cb7e20209ef534f7d221b3e2f10879821d8ee",
     "debug": "2e7256717078c829ec7b02dadf9e20c490d7ae861b12903b8c7637ba50da554c"
   },
-  "source_commit": "ebadc3882561eefaa559bb155a7bcfaf1121e29f",
-  "source_inventory_sha256": "9b20916ed5e49cd95cfa9fb93eaeed5a11af6c97bade75108931929c11ed0166",
+  "source_commit": "aecc637fba0fb96b7c3c34dd51cb7c80e83bc6d6",
+  "source_inventory_sha256": "ca2257612fb56391a23ff37a8a57a81a8233a4e2fcad551af970c2291496799c",
   "files": {
     ".nojekyll": {
       "bytes": 0,
@@ -48,13 +50,13 @@
       "bytes": 466,
       "sha256": "f66638969bba690b5398d66d8dca8c5df2e3c98af3b17a494403af36f52e9477"
     },
-    "play-fast/actor_batch.wasm": {
-      "bytes": 196031,
-      "sha256": "b06e584bf8e6957891f3bda7611bc86609c1dfdeac01ec637ed2963cff267bef"
+    "play-fast/actor_batch-48bcd96d6747.wasm": {
+      "bytes": 200766,
+      "sha256": "48bcd96d674777399caa29901b69b70e1d3e029bf970baa278b2433b6500805f"
     },
-    "play-fast/index-7fe8ce775ae6.pck": {
-      "bytes": 21494928,
-      "sha256": "7fe8ce775ae627e918b0beabf6b73ef1db1c0b2a7664b4d49db7c71b72c3b122"
+    "play-fast/index-7b4af7531f94.pck": {
+      "bytes": 21500172,
+      "sha256": "7b4af7531f949c684ba12cc9e13c430ff88321dbe4de841d687410f737741eaf"
     },
     "play-fast/index.144x144.png": {
       "bytes": 13021,
@@ -81,8 +83,8 @@
       "sha256": "5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3"
     },
     "play-fast/index.html": {
-      "bytes": 14548,
-      "sha256": "464902411081bf5a0133753c80d608c8322c9fd4407d212243fad9b06472599b"
+      "bytes": 14586,
+      "sha256": "31dde22027d753b2a21be6ba577d4ce28a0c32f07af9c397f5e9dec528f6dbf7"
     },
     "play-fast/index.icon.png": {
       "bytes": 67671,
@@ -105,8 +107,8 @@
       "sha256": "3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e"
     },
     "play-fast/index.service.worker.js": {
-      "bytes": 6050,
-      "sha256": "e3b36e388d92a37d65244fad54a7c843aecf18a9972b717691f0881ee36c6958"
+      "bytes": 6062,
+      "sha256": "f89a7d8aaee19aad202279822086b027e19ca8c06438322e0d04a736d9cd8ab8"
     },
     "play-fast/index.side.wasm": {
       "bytes": 44078870,
