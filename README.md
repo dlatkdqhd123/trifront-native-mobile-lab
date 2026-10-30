@@ -2,7 +2,7 @@
 
 Isolated offline test build. https://dlatkdqhd123.github.io/trifront-native-mobile-lab/
 
-Source branch: perf/native-actor-batch, source commit aecc637fba0fb96b7c3c34dd51cb7c80e83bc6d6.
+Source branch: perf/native-actor-batch, source commit 534678e46920c59af92d750cc2124fface632fe1.
 Godot 4.7.2 / Emscripten 4.0.11 / wasm32 single thread. Select C++ or GDScript on the page; exported assets only.
 
 Mobile physical-device FPS and iOS Safari validation are pending. Results stay in browser local storage and can be downloaded as JSON.
@@ -28,3 +28,9 @@ Desktop throttled ABBA (2 MiB/s +40 ms): 37.1 -> 19.3 seconds; warm revisit 3.7 
 ## Shadow batch API2
 
 Field/frame shadow geometry and full MultiMesh buffers are computed in one C++ call; GDScript retains masks and resource ownership. Inactive cached groups can be reused without losing shadows. PCK and native library use content-hashed filenames to keep ABI versions together. Source aecc637fba0fb96b7c3c34dd51cb7c80e83bc6d6. Windows and Web share 18,571 actor checks plus 3,857 shadow buffer checks. Physical-phone FPS remains pending.
+
+## Field query API1
+
+The C++ mode also batches integer density selection across candidate monsters. Each authoritative field owns independent scratch memory; spawn/state/damage/event ordering remains in GDScript. The default production server is unchanged. Source 534678e46920c59af92d750cc2124fface632fe1.
+
+Windows release combined C++ comparison reduced mean frame time by 3.7-6.2% across the three dense diagnostic maps, with similar process RSS. This includes actor/shadow/query paths and is not a phone FPS result or a density-query-only gain. Physical-phone validation and full monster-state migration remain pending.
