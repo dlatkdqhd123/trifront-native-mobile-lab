@@ -125,7 +125,7 @@ window.fetch=async function(input,init){
  Object.defineProperty(counted,'url',{value:response.url});return counted;
 };
 const nativeActorProgressTimer=setInterval(()=>window.nativeActorProgress(),500);
-fetch('../build.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('빌드 정보 조회 실패');return r.json()}).then(b=>{const prefix=b.play_path||'play/';window.__nativeActorBuild={source_commit:b.source_commit,source_inventory_sha256:b.source_inventory_sha256,wasm_sha256:b.wasm_sha256,pck_sha256:b.files[prefix+(b.main_pack||'index.pck')].sha256,html_sha256:b.files[prefix+'index.html'].sha256};window.__nativeActorLoading.expected=Object.entries(b.files).filter(([n])=>n.startsWith(prefix)&&/\.(wasm|pck)$/.test(n)).reduce((n,[,f])=>n+f.bytes,0)}).catch(e=>{window.__nativeActorBuildError=String(e)});
+fetch('../build.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('빌드 정보 조회 실패');return r.json()}).then(b=>{const prefix=b.play_path||'play/';window.__nativeActorBuild={source_commit:b.source_commit,upstream_commit:b.upstream_commit,content_version:b.content_version,source_inventory_sha256:b.source_inventory_sha256,wasm_sha256:b.wasm_sha256,pck_sha256:b.files[prefix+(b.main_pack||'index.pck')].sha256,html_sha256:b.files[prefix+'index.html'].sha256};window.__nativeActorLoading.expected=Object.entries(b.files).filter(([n])=>n.startsWith(prefix)&&/\.(wasm|pck)$/.test(n)).reduce((n,[,f])=>n+f.bytes,0)}).catch(e=>{window.__nativeActorBuildError=String(e)});
 window.nativeActorFailure=function(message){document.getElementById('laberror').textContent=message;window.__nativeActorFailure=message};
 window.nativeActorReady=function(){window.__nativeActorStartup={ready_ms:performance.now()-window.__nativeActorLoading.started,files:window.__nativeActorLoading.files};clearInterval(nativeActorProgressTimer);document.getElementById('labfoot').textContent='워밍업 5초 후 측정 · 같은 맵·부하로 양쪽을 각각 실행하세요. 세로 화면에서는 가로로 돌려주세요.'};
 window.nativeActorReport=function(row){
@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 
 		<script src="index.js"></script>
 		<script>
-const GODOT_CONFIG = {"args": [], "canvasResizePolicy": 0, "emscriptenPoolSize": 8, "ensureCrossOriginIsolationHeaders": true, "executable": "index", "experimentalVK": false, "fileSizes": {"index.wasm": 1508095, "index-5b13383815d9.pck": 21412196}, "focusCanvas": true, "gdextensionLibs": ["actor_batch-4d4c478e5ad7.wasm"], "godotPoolSize": 4, "serviceWorker": "index.service.worker.js", "mainPack": "index-5b13383815d9.pck"};
+const GODOT_CONFIG = {"args": [], "canvasResizePolicy": 0, "emscriptenPoolSize": 8, "ensureCrossOriginIsolationHeaders": true, "executable": "index", "experimentalVK": false, "fileSizes": {"index.wasm": 1508095, "index-1c57763f0ffc.pck": 21414916}, "focusCanvas": true, "gdextensionLibs": ["actor_batch-4d4c478e5ad7.wasm"], "godotPoolSize": 4, "serviceWorker": "index.service.worker.js", "mainPack": "index-1c57763f0ffc.pck"};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
