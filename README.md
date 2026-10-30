@@ -16,3 +16,11 @@ Build hashes and toolchain receipt: build.json.
 [Release notes, SHA256 checksums and build receipt](https://github.com/dlatkdqhd123/trifront-native-mobile-lab/releases/tag/native-web-2026.10.30-6bd2e16b)
 
 This is a Web export for HTTPS hosting, not an Android APK. On a phone, use the live Pages URL above. Opening extracted HTML as a local file will not run the game.
+
+## Mobile loading update
+
+[Start the optimized C++ practice build](https://dlatkdqhd123.github.io/trifront-native-mobile-lab/play-fast/?mode=cpp&stress=0&map=map.canyon_loop)
+
+Gameplay pack: 58.2 MB -> 21.5 MB; preserved current gameplay art/SFX. Versioned pack and separate PWA scope. The older play URL redirects here with the chosen mode/map. Source ebadc3882561eefaa559bb155a7bcfaf1121e29f.
+
+Desktop throttled ABBA (2 MiB/s +40 ms): 37.1 -> 19.3 seconds; warm revisit 3.7 seconds. Not physical-phone timing. The earlier Release ZIP stays archived; the live site uses this newer build.

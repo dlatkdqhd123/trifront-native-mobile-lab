@@ -11,11 +11,25 @@
     "platform/native_actor/runtime.gd": "8eaf3b0f0493d285a21b409a50561d19d0934e9034b3d5e3732ddae388f79476"
   },
   "wasm_sha256": "b06e584bf8e6957891f3bda7611bc86609c1dfdeac01ec637ed2963cff267bef",
+  "play_path": "play-fast/",
+  "main_pack": "index-7fe8ce775ae6.pck",
+  "asset_selection": {
+    "registered_files": 408,
+    "included_art": 407,
+    "excluded_menu_art": [
+      "assets/art/backgrounds/forest-horde-v1.png",
+      "assets/art/backgrounds/promo-canyon-battle-v2.png",
+      "assets/art/backgrounds/ruined-gate-army-v1.png",
+      "assets/art/backgrounds/ruined-village-v1.png"
+    ],
+    "excluded_music": "menu.ogg, match_*.ogg (MusicDirector not instantiated)",
+    "verified_in_pack": 407
+  },
   "templates_sha256": {
     "release": "555acaddcfde759a431f326a244cb7e20209ef534f7d221b3e2f10879821d8ee",
     "debug": "2e7256717078c829ec7b02dadf9e20c490d7ae861b12903b8c7637ba50da554c"
   },
-  "source_commit": "6bd2e16b1365e27b674fcd4b8a496090928c6098",
+  "source_commit": "ebadc3882561eefaa559bb155a7bcfaf1121e29f",
   "source_inventory_sha256": "9b20916ed5e49cd95cfa9fb93eaeed5a11af6c97bade75108931929c11ed0166",
   "files": {
     ".nojekyll": {
@@ -23,78 +37,82 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     "index.html": {
-      "bytes": 4049,
-      "sha256": "2f87acce3173efd1501a7a80b193354ef5343aa1f77965edf01731bde74917c2"
+      "bytes": 4092,
+      "sha256": "8d726ce9651d8edeaa494831ccd278e251fda4ee6ca58d23753f259e8d1ed9d5"
     },
     "LICENSE.godot-cpp.txt": {
       "bytes": 1093,
       "sha256": "26a5b210d90760156ce886267ce9df235787dcc6cebfd7ecd95ef5b6fdcc95bf"
     },
-    "play/actor_batch.wasm": {
+    "play/index.html": {
+      "bytes": 466,
+      "sha256": "f66638969bba690b5398d66d8dca8c5df2e3c98af3b17a494403af36f52e9477"
+    },
+    "play-fast/actor_batch.wasm": {
       "bytes": 196031,
       "sha256": "b06e584bf8e6957891f3bda7611bc86609c1dfdeac01ec637ed2963cff267bef"
     },
-    "play/index.144x144.png": {
+    "play-fast/index-7fe8ce775ae6.pck": {
+      "bytes": 21494928,
+      "sha256": "7fe8ce775ae627e918b0beabf6b73ef1db1c0b2a7664b4d49db7c71b72c3b122"
+    },
+    "play-fast/index.144x144.png": {
       "bytes": 13021,
       "sha256": "995ea35946093137a665a354b8e259dda7fbbe31ab36af42bae9097b8785c42f"
     },
-    "play/index.180x180.png": {
+    "play-fast/index.180x180.png": {
       "bytes": 18184,
       "sha256": "85bfc7b95a542a58d2b0ff87ddb1a43b45f4c8b62ef48f4003c75480710183b7"
     },
-    "play/index.512x512.png": {
+    "play-fast/index.512x512.png": {
       "bytes": 67671,
       "sha256": "f5d943ac42221b883e5aeff3b6b28b87a5fa6b93362b37402f44e041c40e35d9"
     },
-    "play/index.apple-touch-icon.png": {
+    "play-fast/index.apple-touch-icon.png": {
       "bytes": 18184,
       "sha256": "85bfc7b95a542a58d2b0ff87ddb1a43b45f4c8b62ef48f4003c75480710183b7"
     },
-    "play/index.audio.position.worklet.js": {
+    "play-fast/index.audio.position.worklet.js": {
       "bytes": 2973,
       "sha256": "be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8"
     },
-    "play/index.audio.worklet.js": {
+    "play-fast/index.audio.worklet.js": {
       "bytes": 7298,
       "sha256": "5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3"
     },
-    "play/index.html": {
-      "bytes": 11614,
-      "sha256": "e3ac947489bace7471c833b099afa07e4ffa315fd4385c1474aa1493c4cbbcd3"
+    "play-fast/index.html": {
+      "bytes": 14548,
+      "sha256": "464902411081bf5a0133753c80d608c8322c9fd4407d212243fad9b06472599b"
     },
-    "play/index.icon.png": {
+    "play-fast/index.icon.png": {
       "bytes": 67671,
       "sha256": "f5d943ac42221b883e5aeff3b6b28b87a5fa6b93362b37402f44e041c40e35d9"
     },
-    "play/index.js": {
+    "play-fast/index.js": {
       "bytes": 2859484,
       "sha256": "631bbecee5e5136b5f29ed7dedb31a5d022d65da4b639b6e52a48d0c5e3d3154"
     },
-    "play/index.manifest.json": {
+    "play-fast/index.manifest.json": {
       "bytes": 329,
       "sha256": "919b74865aa995538424882775e56add253c0fd8d25b66ba32f23f4383d49a9e"
     },
-    "play/index.offline.html": {
+    "play-fast/index.offline.html": {
       "bytes": 971,
       "sha256": "b0a5d443e78f58717adac780bac91c1431bfa3b801c41f4707d507fb5ad2e47f"
     },
-    "play/index.pck": {
-      "bytes": 58215720,
-      "sha256": "5f60e24c9cd5b46d42de8472b2d34ff5ee1b2f2c427a94fc0f43eb88a781473c"
-    },
-    "play/index.png": {
+    "play-fast/index.png": {
       "bytes": 21443,
       "sha256": "3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e"
     },
-    "play/index.service.worker.js": {
-      "bytes": 5859,
-      "sha256": "fe827fa6583f9fa16912a16fd8c999d18ec309d3d59a82d9d9f840672411872a"
+    "play-fast/index.service.worker.js": {
+      "bytes": 6050,
+      "sha256": "e3b36e388d92a37d65244fad54a7c843aecf18a9972b717691f0881ee36c6958"
     },
-    "play/index.side.wasm": {
+    "play-fast/index.side.wasm": {
       "bytes": 44078870,
       "sha256": "e0c3b75ff009c54b83a02ae819e04dd1f533f457c54e516f440a564d8f308a07"
     },
-    "play/index.wasm": {
+    "play-fast/index.wasm": {
       "bytes": 1508095,
       "sha256": "d37e06f7126849a81fa099f1cf89f0d8ccbb87502b8c857492490dff66fad95a"
     }
