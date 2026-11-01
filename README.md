@@ -7,3 +7,5 @@ Ordinary title, nickname, lobby and gameplay flow. C++ render/shadow/query kerne
 Compiled distribution only. Source and runtime capability are recorded in build.json. Assets are selected from a recorded runtime dependency closure and audited in the PCK. Old comparison URLs redirect to this release. Previous builds remain in Git history and existing Releases.
 
 Read-only frame snapshots are reused until state/perspective changes. Field ABI2 shares ordered spatial candidates before enemy movement; live combat predicates and authoritative order remain unchanged. Formal performance figures are deferred; FPS/resource/snapshot reuse counters are retained for device review.
+
+Updated to main v0.462 (runtime capability458), including repair/economy/gear/mercenary fixes, boss alerts, lobby shop/inventory and guild/rune UI. Actor ABI4 matches the current visible support surfaces; field ABI2 and snapshot reuse are retained.

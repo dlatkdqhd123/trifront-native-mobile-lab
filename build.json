@@ -1,24 +1,24 @@
 {
   "engine": "4.7.2-stable",
-  "contract_version": 3,
+  "contract_version": 4,
   "field_contract": 2,
   "godot_cpp": "27d9dd23c83871e0619fca5dc2cddfbfd69e926a",
   "emscripten": "emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 4.0.11 (d3432e7a2a6585331c94b041973fb16c9f332ce4)",
   "threads": false,
   "sources": {
-    "native/actor_batch/src/actor_batch.cpp": "681048db001c2e998937cab92892caf1e14e3623ac26919e18babd8e9376e7b0",
+    "native/actor_batch/src/actor_batch.cpp": "9a1b9c11715451eb7c7de1059e405932f026adcc49182533270fafc588e69d18",
     "native/actor_batch/src/field_batch.cpp": "940f7662225ae4340c15c0d5240ccaaa391a258f1857995e7bfa2a32ead6b269",
     "native/actor_batch/src/field_core.hpp": "09659db73dd37d77bdad2eb5fc0386c12e55a2d30804e63c0fe8b7165cf34323",
     "native/actor_batch/src/field_spatial.hpp": "4470f5953dc9c1d03f28474123807fa9f8858f9ace22c394e68c1cd532645914",
     "native/actor_batch/SConstruct": "57a60d28ea7353a7e3b4f17b30aeaeb8c19342f3b1634719d5ca3784331b3cd9",
     "native/actor_batch/profile.json": "c0e090117d26d866c294d8253f5d103062771e6818bc5f25470399d6fa668c24",
-    "client/view/native_actor_batch.gd": "2444118ca67dbecedd0b461b2004449aa833b32137fb8937a5f714c290e7aee8",
-    "platform/native_actor/runtime.gd": "e77f1c4c3fda9ac77510527529ed3dfd23894dcc68928267633b9a77644d92b5"
+    "client/view/native_actor_batch.gd": "6d9003cc4d9e59adbfb57050a35336e17f1c68fb2864d4ca50e50aaac5133354",
+    "platform/native_actor/runtime.gd": "71ee559c989f56a1b4b01894e509d2363c0ac041a98a5936352664a361360b7a"
   },
-  "wasm_sha256": "5d8b94739b1198f41e662be3b4306663d9ec9a3ccf4bafcd10a4e4f9421c987b",
-  "native_library": "actor_batch-5d8b94739b11.wasm",
+  "wasm_sha256": "8604c771c39f4da79904b6b0f60713cae84350a65e98c95fd03a24c0c1002af3",
+  "native_library": "actor_batch-8604c771c39f.wasm",
   "play_path": "game/",
-  "main_pack": "index-6d670e0df527.pck",
+  "main_pack": "index-ce99230f1cca.pck",
   "asset_selection": {
     "policy": "runtime registry reference closure; constructed IDs and sheet dependencies retained",
     "selected_ids": {
@@ -518,20 +518,20 @@
     "release": "555acaddcfde759a431f326a244cb7e20209ef534f7d221b3e2f10879821d8ee",
     "debug": "2e7256717078c829ec7b02dadf9e20c490d7ae861b12903b8c7637ba50da554c"
   },
-  "source_commit": "24955558c935cf5331736712358259d6f3f0a286",
-  "source_inventory_sha256": "f555967059d75fd6e0aa719b3c2bd679d224de082a4f59b20edf6fbecc7509b0",
+  "source_commit": "129d810e758cabc5c0f7f6791767ffe0019f2a73",
+  "source_inventory_sha256": "c7e3fb3441aeb1a0d75b626653e6145f928c7ab5ded40eaa30e261d3de4b9c6b",
   "files": {
     ".nojekyll": {
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
-    "game/actor_batch-5d8b94739b11.wasm": {
-      "bytes": 217393,
-      "sha256": "5d8b94739b1198f41e662be3b4306663d9ec9a3ccf4bafcd10a4e4f9421c987b"
+    "game/actor_batch-8604c771c39f.wasm": {
+      "bytes": 218761,
+      "sha256": "8604c771c39f4da79904b6b0f60713cae84350a65e98c95fd03a24c0c1002af3"
     },
-    "game/index-6d670e0df527.pck": {
-      "bytes": 37424972,
-      "sha256": "6d670e0df527064d9d090bbe246aa8b34e6c913a7f85a6dbed04b6c7c240253f"
+    "game/index-ce99230f1cca.pck": {
+      "bytes": 37486124,
+      "sha256": "ce99230f1cca8511ec0f032fa49ce8b27272f3cc53adddbb33fe6a789ac63e46"
     },
     "game/index.144x144.png": {
       "bytes": 13021,
@@ -559,7 +559,7 @@
     },
     "game/index.html": {
       "bytes": 14469,
-      "sha256": "a3c6c9db6233d58ddfb7c7279803da3a20af0d530937cd5b9825a82c4f8c9566"
+      "sha256": "12bacf3e5406198957efe725fb2aa09fc3f67aa49d0e83bb8503f46011e5b660"
     },
     "game/index.icon.png": {
       "bytes": 67671,
@@ -583,7 +583,7 @@
     },
     "game/index.service.worker.js": {
       "bytes": 6063,
-      "sha256": "f69ad926eb94e9ed96ad388fe3f4dba8007b45fa92fb4c94f1854d0e81e1203d"
+      "sha256": "67988a4a8a224eb62286fca3b2366b694ce026e83053989d567906bc2e3b7a2d"
     },
     "game/index.side.wasm": {
       "bytes": 44078870,
@@ -618,9 +618,9 @@
       "sha256": "8bd1be8dea1beabac4c134280a0e50bebda654b637d7ffeafb19ebbb8584fa1f"
     }
   },
-  "upstream_commit": "9ee3cded635ad34b074f8767c3aee0a33adab4bd",
-  "content_version": 445,
+  "upstream_commit": "5b06475a61900fb1a47bac0bcc23e499d2d542b1",
+  "content_version": 458,
   "distribution": "cpp-release",
-  "asset_state_sha256": "2cf4f72c7f58c6533d2e532d66c7db90dd53c2eb31c0838b7ec1f5e79b8bf2ee",
-  "update_report_sha256": "923a314b06cf0d4258cd717b66cd93c3231caa1ae76a5d0b14780554a0f87be9"
+  "asset_state_sha256": "07b85f0f231cc62911c931ca72d4f4ddbedd63c750f54553823e4ac966f882e4",
+  "update_report_sha256": "b25fb977fa4666223e381ec11e3aabc5ff72cdfb62c65a8cae516683747e65af"
 }
