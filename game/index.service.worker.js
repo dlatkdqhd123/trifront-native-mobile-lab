@@ -4,7 +4,7 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1793498861|10009506';
+const CACHE_VERSION = '1793506895|11780994';
 /** @type {string} */
 const CACHE_PREFIX = 'TRI-FRONT-cpp-release-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
@@ -17,7 +17,7 @@ const ENSURE_CROSSORIGIN_ISOLATION_HEADERS = true;
 const CACHED_FILES = ["index.html","index.js","index.offline.html","index.icon.png","index.apple-touch-icon.png","index.audio.worklet.js","index.audio.position.worklet.js"];
 // Files that we might not want the user to preload, and will only be cached on first load.
 /** @type {string[]} */
-const CACHEABLE_FILES = ["index.wasm","index-ce99230f1cca.pck","index.side.wasm","actor_batch-8604c771c39f.wasm"];
+const CACHEABLE_FILES = ["index.wasm","index-e51a08798653.pck","index.side.wasm","actor_batch-b063c9810849.wasm"];
 const FULL_CACHE = CACHED_FILES.concat(CACHEABLE_FILES);
 
 self.addEventListener('install', (event) => {
