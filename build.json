@@ -6,7 +6,7 @@
   "emscripten": "emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 4.0.11 (d3432e7a2a6585331c94b041973fb16c9f332ce4)",
   "threads": false,
   "sources": {
-    "native/actor_batch/src/actor_batch.cpp": "206e06ca0a15a4d4de3cd15568a4bd196207d0994c05fa80ffae41d68ccc760a",
+    "native/actor_batch/src/actor_batch.cpp": "931c03ecd5329a58303f2b5bd8e8c2a02188ceece3bc21cf1ef02ad9dd26a6c0",
     "native/actor_batch/src/field_batch.cpp": "940f7662225ae4340c15c0d5240ccaaa391a258f1857995e7bfa2a32ead6b269",
     "native/actor_batch/src/field_core.hpp": "09659db73dd37d77bdad2eb5fc0386c12e55a2d30804e63c0fe8b7165cf34323",
     "native/actor_batch/src/field_spatial.hpp": "4470f5953dc9c1d03f28474123807fa9f8858f9ace22c394e68c1cd532645914",
@@ -15,10 +15,10 @@
     "client/view/native_actor_batch.gd": "4543c37f0a20126f4e59e505e6eb89d70cac53bd889b782f33d5061a32e26f06",
     "platform/native_actor/runtime.gd": "90fed10929a674737bdafe83c641c39b8db9607523d78d9d0823a8317d859f08"
   },
-  "wasm_sha256": "b063c981084929a304094809a265adbe8fc66ff88e5e86a8bae5834f3fcfa6ec",
-  "native_library": "actor_batch-b063c9810849.wasm",
+  "wasm_sha256": "2390f11adf7607f450a4261fa6d032f297d4586c1db8445d9bee881d81989995",
+  "native_library": "actor_batch-2390f11adf76.wasm",
   "play_path": "game/",
-  "main_pack": "index-e51a08798653.pck",
+  "main_pack": "index-ea62e8253155.pck",
   "asset_selection": {
     "policy": "runtime registry reference closure; constructed IDs and sheet dependencies retained",
     "selected_ids": {
@@ -525,20 +525,20 @@
     "release": "555acaddcfde759a431f326a244cb7e20209ef534f7d221b3e2f10879821d8ee",
     "debug": "2e7256717078c829ec7b02dadf9e20c490d7ae861b12903b8c7637ba50da554c"
   },
-  "source_commit": "3163bd0e7ef3bfd222165475c211eb90549dce49",
-  "source_inventory_sha256": "e06e8b5b7b74e14472302e8a98af7a45f5fba41e3c3ebff5b5c3fc2e4664f2d1",
+  "source_commit": "ee68a5dd1878307710c1e854be04fa61e387b14d",
+  "source_inventory_sha256": "f8836d1c146d572eefd9d2760bdd538dbd76f5889936fc4aaba690649b149374",
   "files": {
     ".nojekyll": {
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
-    "game/actor_batch-b063c9810849.wasm": {
-      "bytes": 230807,
-      "sha256": "b063c981084929a304094809a265adbe8fc66ff88e5e86a8bae5834f3fcfa6ec"
+    "game/actor_batch-2390f11adf76.wasm": {
+      "bytes": 232728,
+      "sha256": "2390f11adf7607f450a4261fa6d032f297d4586c1db8445d9bee881d81989995"
     },
-    "game/index-e51a08798653.pck": {
-      "bytes": 37603048,
-      "sha256": "e51a0879865385c3e69574848117e691e1f8f60b36ea70e0f469eb228141fdbf"
+    "game/index-ea62e8253155.pck": {
+      "bytes": 37621736,
+      "sha256": "ea62e8253155660f82cb334c1b9ec7e89adac62a65d61d0b6d65b63d7d152c79"
     },
     "game/index.144x144.png": {
       "bytes": 13021,
@@ -565,8 +565,8 @@
       "sha256": "5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3"
     },
     "game/index.html": {
-      "bytes": 14469,
-      "sha256": "cee8e0eee88dba68ac0e93cb414f58bc8404e8e4fdb079c36e992f332253ec54"
+      "bytes": 15367,
+      "sha256": "45f0d35dee8f898aec8ee5c4d710defa3a6c9ca8e64a74fe206967a4cfef2ade"
     },
     "game/index.icon.png": {
       "bytes": 67671,
@@ -590,7 +590,7 @@
     },
     "game/index.service.worker.js": {
       "bytes": 6063,
-      "sha256": "57655d5c78fad28b7cfd7cddea7ce2cbd44cf6db5f25716e0ed0a755532080cb"
+      "sha256": "4d207039513fa495c934d02572a91610d98098fa394409e5000b2b2832cc4f70"
     },
     "game/index.side.wasm": {
       "bytes": 44078870,
@@ -625,9 +625,9 @@
       "sha256": "8bd1be8dea1beabac4c134280a0e50bebda654b637d7ffeafb19ebbb8584fa1f"
     }
   },
-  "upstream_commit": "7c75106c185e806fc58a03a7e3362c12993fcb9b",
-  "content_version": 458,
+  "upstream_commit": "fe6b3da3ef85e8edc75ecf66b606de8b04040944",
+  "content_version": 467,
   "distribution": "cpp-release",
-  "asset_state_sha256": "da1155a2360d6f3c48dd79907472572eb1a36f19e8ace076683a6d1a4105fb9c",
-  "update_report_sha256": "a78ff1c42c1903cf9b6cca9916b3a9d188c16cf8784ebf0dbe6f9e162bff0a84"
+  "asset_state_sha256": "73ae1c26eb8949efe73027cf775f4a79ec21afb8a4741aedfd5a6f673110b12b",
+  "update_report_sha256": "3ea9addfac3fa5bf2f18a464428e16e2589503b9fe7f14947d0d4d75ddafdebf"
 }

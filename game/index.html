@@ -103,6 +103,7 @@ html{height:100%;background:#101714}body{height:100%;display:flex;align-items:ce
 </style>
 <script>
 window.__nativeActorState=null;
+window.__nativeActorHistory=[];
 window.__nativeActorBuild=null;
 window.__nativeActorLoading={started:performance.now(),files:{},expected:0,lastData:performance.now()};
 window.nativeActorProgress=function(){
@@ -133,15 +134,20 @@ window.nativeActorReport=function(row){
  row.js_heap_bytes=performance.memory?.usedJSHeapSize??null;row.recorded_at=new Date().toISOString();
  row.build=window.__nativeActorBuild;
  window.__nativeActorState=row;
+ if(row.phase==='game_screen'&&row.samples>0&&document.visibilityState==='visible'){window.__nativeActorHistory.push(row);if(window.__nativeActorHistory.length>180)window.__nativeActorHistory.shift()}
  const status=row.mode==='cpp'?`C++ ${row.unit_batches>0?'작동 중':'대기'} · 호출 ${row.unit_batches}/${row.pose_batches}/${row.sort_batches}/${row.shadow_batches??0} · 필드 ${row.field_queries??0}`:'GDScript 작동 중';
- document.getElementById('labmetrics').textContent=row.samples?`${status} | ${row.fps.toFixed(1)} FPS · 평균 ${row.mean_ms.toFixed(1)} / p99 ${row.p99_ms.toFixed(1)} ms · ${row.samples}프레임`:`${status} | 워밍업 ${Math.min(5,row.elapsed_s).toFixed(0)}/5초`;
+ document.getElementById('labmetrics').textContent=row.samples?`${status} | 최근 ${(row.recent_fps??row.fps).toFixed(1)} FPS · 누적 ${row.fps.toFixed(1)} · 평균 ${row.mean_ms.toFixed(1)} / p99 ${row.p99_ms.toFixed(1)} ms · ${row.samples}프레임`:`${status} | 워밍업 ${Math.min(5,row.elapsed_s).toFixed(0)}/5초`;
  document.getElementById('labfoot').textContent=`${row.phase} · tick ${row.tick} · 스냅샷 ${row.snapshot_builds??0}/${row.snapshot_reuses??0} · 검색 준비 ${row.spatial_index_builds??0} · 객체 ${row.objects} · 텍스처 ${(row.texture_bytes/1048576).toFixed(1)} MiB · ${row.browser.crossOriginIsolated?'격리됨':'격리 안 됨'} · 브라우저가 제공하지 않는 메모리는 0/미지원으로 기록됩니다.`;
+ if(row.phase==='game_screen'){
+  const cpu=(key)=>{const a=row.cpu_us?.[key];return a&&a[2]?`${(a[0]/a[2]/1000).toFixed(1)}/${(a[1]/1000).toFixed(1)}`:'0/0'};
+  document.getElementById('labfoot').textContent=`R${row.round} · 몹 ${(row.sim_unit_counts??[]).join('/')} · CPU 평균/최대ms: 봇 ${cpu('bots')} 전투 ${cpu('simulation')} 스냅샷 ${cpu('snapshot')} 화면 ${cpu('world')} · 객체 ${row.objects} · 텍스처 ${(row.texture_bytes/1048576).toFixed(1)}MiB · draw ${row.draw_calls??0}`;
+ }
  if(row.samples>0&&row.build&&document.visibilityState==='visible')try{localStorage.setItem('trifront-cpp-release-'+row.build.source_inventory_sha256.slice(0,12)+'-'+row.build.html_sha256.slice(0,12)+'-'+row.mode+'-'+row.map+'-'+row.stress,JSON.stringify(row))}catch{}
 };
 document.addEventListener('DOMContentLoaded',()=>{
  const bar=document.createElement('div');bar.id='labbar';bar.innerHTML='<span>TRI-FRONT</span><button id="save">기록 저장</button><button id="full">전체 화면</button><span id="labmetrics">게임 불러오는 중…</span><span id="laberror" role="alert"></span>';document.body.append(bar);
  const foot=document.createElement('div');foot.id='labfoot';foot.textContent='최초 로딩 시 다운로드와 브라우저 격리 준비로 새로고침이 발생할 수 있습니다.';document.body.append(foot);
- document.getElementById('save').onclick=()=>{const rows=[];try{for(let i=0;i<localStorage.length;i++){const key=localStorage.key(i);if(key.startsWith('trifront-cpp-release-'))rows.push(JSON.parse(localStorage.getItem(key)))}}catch{}const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify({scope:'cpp-web-release; live app flow; screen-local rolling frame metrics; not native APK performance',rows},null,2)],{type:'application/json'}));a.download='trifront-web-results.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)};
+ document.getElementById('save').onclick=()=>{const rows=[];try{for(let i=0;i<localStorage.length;i++){const key=localStorage.key(i);if(key.startsWith('trifront-cpp-release-'))rows.push(JSON.parse(localStorage.getItem(key)))}}catch{}const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify({scope:'cpp-web-release; live app flow; recent5s and rolling3600 frame metrics; CPU per call sum/max/count; inclusive update overlaps host stages; GPU excluded',rows,recent:window.__nativeActorHistory},null,2)],{type:'application/json'}));a.download='trifront-web-results.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)};
  document.getElementById('full').onclick=()=>document.documentElement.requestFullscreen?.().catch(()=>{foot.textContent='이 브라우저는 전체 화면을 지원하지 않습니다. 가로 화면으로 실행해주세요.'});
  window.addEventListener('error',e=>window.nativeActorFailure(e.message));
  window.addEventListener('unhandledrejection',e=>window.nativeActorFailure(String(e.reason)));
@@ -166,7 +172,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 
 		<script src="index.js"></script>
 		<script>
-const GODOT_CONFIG = {"args": [], "canvasResizePolicy": 0, "emscriptenPoolSize": 8, "ensureCrossOriginIsolationHeaders": true, "executable": "index", "experimentalVK": false, "fileSizes": {"index.wasm": 1508095, "index-e51a08798653.pck": 37603048}, "focusCanvas": true, "gdextensionLibs": ["actor_batch-b063c9810849.wasm"], "godotPoolSize": 4, "serviceWorker": "index.service.worker.js", "mainPack": "index-e51a08798653.pck"};
+const GODOT_CONFIG = {"args": [], "canvasResizePolicy": 0, "emscriptenPoolSize": 8, "ensureCrossOriginIsolationHeaders": true, "executable": "index", "experimentalVK": false, "fileSizes": {"index.wasm": 1508095, "index-ea62e8253155.pck": 37621736}, "focusCanvas": true, "gdextensionLibs": ["actor_batch-2390f11adf76.wasm"], "godotPoolSize": 4, "serviceWorker": "index.service.worker.js", "mainPack": "index-ea62e8253155.pck"};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
