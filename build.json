@@ -18,10 +18,12 @@
   "wasm_sha256": "281c14fd427afa7d28524b128049f4f1963ff4829a803d79dd84f10764b6d440",
   "native_library": "actor_batch-281c14fd427a.wasm",
   "play_path": "game/",
-  "main_pack": "index-2461f969e5bf.pck",
+  "main_pack": "index-27ca5e1f4338.pck",
   "asset_selection": {
     "policy": "runtime registry reference closure; constructed IDs and sheet dependencies retained",
     "selected_ids": {
+      "spr.fx.rune.body484": "runtime literal/data reference",
+      "spr.fx.rune.storm483": "runtime literal/data reference",
       "sfx.boss463.warning": "runtime literal/data reference",
       "sfx.boss463.corpse_golem": "runtime literal/data reference",
       "sfx.boss463.wolf_king": "runtime literal/data reference",
@@ -517,16 +519,16 @@
       "assets/art/ui/gear/war_bow-v1.png",
       "assets/art/ui/gear/world_tree_branch-v1.png"
     ],
-    "included_art": 383,
-    "registered_files": 426,
-    "verified_in_pack": 383
+    "included_art": 385,
+    "registered_files": 428,
+    "verified_in_pack": 385
   },
   "templates_sha256": {
     "release": "555acaddcfde759a431f326a244cb7e20209ef534f7d221b3e2f10879821d8ee",
     "debug": "2e7256717078c829ec7b02dadf9e20c490d7ae861b12903b8c7637ba50da554c"
   },
-  "source_commit": "8d14d1de43139858a78729f2f24c42a1b70a9364",
-  "source_inventory_sha256": "8481367c4433096225385aec4c31743ce85c0f5620899eeff40159190a435bae",
+  "source_commit": "e4afd5e17a205f678cdc771d6ec8002f1ca283fb",
+  "source_inventory_sha256": "c37641cb024a54916592c3a636102c4e75dfa06d5743a2c8c8c79766c3491f45",
   "files": {
     ".nojekyll": {
       "bytes": 0,
@@ -540,9 +542,9 @@
       "bytes": 5622,
       "sha256": "c7256396f75ac89f8fda2b97608829b8bfe22b0f44fa40c7958b7ff25b179449"
     },
-    "game/index-2461f969e5bf.pck": {
-      "bytes": 37676120,
-      "sha256": "2461f969e5bfaa407938a820562776df19b94086553c3fb87c8ae8b2e5fb79d7"
+    "game/index-27ca5e1f4338.pck": {
+      "bytes": 37715224,
+      "sha256": "27ca5e1f4338fb967ddc6a771801ebdfdef5a3adf9502985d3c88fd697c372de"
     },
     "game/index.144x144.png": {
       "bytes": 13021,
@@ -570,7 +572,7 @@
     },
     "game/index.html": {
       "bytes": 15410,
-      "sha256": "3bbf71d5215284684d75d70c39ef086bd5435c1e8a0c8db5990b55f3e52f12b6"
+      "sha256": "2de6ced31744a1b24d7c6bec352f2baba7961f147a79659f946306258b69c2b5"
     },
     "game/index.icon.png": {
       "bytes": 67671,
@@ -594,7 +596,7 @@
     },
     "game/index.service.worker.js": {
       "bytes": 6319,
-      "sha256": "24cbe6bcb37b4cf5ae0527f59c87e3a7ba07d6ffdcaa9818f9c63df121fd631d"
+      "sha256": "a20f22fdd080e2ab1802cf989ad6d0fc0d4063c1f4d3d702336a8cfcf7e7c35d"
     },
     "game/index.side.wasm": {
       "bytes": 44078870,
@@ -637,9 +639,9 @@
       "sha256": "0226e6771923bd7c85742e3b0d2e1f08f291f9061f417daa6ed9571168468531"
     }
   },
-  "upstream_commit": "819d599e92d73955ea2b5dbf45e0d833c6c60664",
+  "upstream_commit": "70750af645e64113ff0ff7eecf55a55a1cad3be1",
   "content_version": 475,
   "distribution": "cpp-release",
-  "asset_state_sha256": "423576ef2016edaf407214687a24b8359fee6a1a8dfd25fe8ef58228d0e03465",
-  "update_report_sha256": "904a361490ed7273862bdd17f904e30035f5ba3b656b461292d538d5c3df4d22"
+  "asset_state_sha256": "ff6241fc119029a7545442376b1a51000da9d4c19ccbc39709073160d2eff97f",
+  "update_report_sha256": "bdbacbf74b94913117682d498a453e61a270dc1ae8d7515fc2f8fffe8c0b14fe"
 }
