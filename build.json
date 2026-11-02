@@ -525,8 +525,8 @@
     "release": "555acaddcfde759a431f326a244cb7e20209ef534f7d221b3e2f10879821d8ee",
     "debug": "2e7256717078c829ec7b02dadf9e20c490d7ae861b12903b8c7637ba50da554c"
   },
-  "source_commit": "7142c9bac65edb283a3437301af0d54ff259e514",
-  "source_inventory_sha256": "a5ea15f509d0614cd90abcfe5861bbfa4f13b5fa4a7adcada4655d444a01afea",
+  "source_commit": "07660c4e5140fb27ee2482c534a3ce5a2c25130e",
+  "source_inventory_sha256": "ecd0a97e9d08f9fa82781fb36fbe2ee12cad0a52dea65e40a77540f543fd2827",
   "files": {
     ".nojekyll": {
       "bytes": 0,
@@ -535,6 +535,10 @@
     "game/actor_batch-281c14fd427a.wasm": {
       "bytes": 238629,
       "sha256": "281c14fd427afa7d28524b128049f4f1963ff4829a803d79dd84f10764b6d440"
+    },
+    "game/browser-start.js": {
+      "bytes": 5622,
+      "sha256": "c7256396f75ac89f8fda2b97608829b8bfe22b0f44fa40c7958b7ff25b179449"
     },
     "game/index-02a2c7ee8064.pck": {
       "bytes": 37623744,
@@ -565,8 +569,8 @@
       "sha256": "5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3"
     },
     "game/index.html": {
-      "bytes": 15367,
-      "sha256": "72f9c73bae1f9225db57a642ba8139fb66e368772aaeb798b399e97c9f960f23"
+      "bytes": 15410,
+      "sha256": "f153a9d4cc6f410e0960402fee24ce4ff724c2cacf62148d68865e2a781208b1"
     },
     "game/index.icon.png": {
       "bytes": 67671,
@@ -589,8 +593,8 @@
       "sha256": "3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e"
     },
     "game/index.service.worker.js": {
-      "bytes": 6063,
-      "sha256": "5baa81ffad5b14f8afa8a35f5e270492f2072e3fdd4b376717a1ff1c175bfa3c"
+      "bytes": 6319,
+      "sha256": "be799fc458a78edfbeb2719ff6af454ba95d9e502d287afaa10f0fc9aa57dff8"
     },
     "game/index.side.wasm": {
       "bytes": 44078870,
@@ -601,8 +605,8 @@
       "sha256": "d37e06f7126849a81fa099f1cf89f0d8ccbb87502b8c857492490dff66fad95a"
     },
     "index.html": {
-      "bytes": 346,
-      "sha256": "e82a91e01eac688e8df713d74d6102f9f321840011d2041ce1a64dfd277d7f72"
+      "bytes": 427,
+      "sha256": "3d3820e4bf82b1705150b4fa4ec1184fc38657cd310cb60712841f7c22616de0"
     },
     "LICENSE.godot-cpp.txt": {
       "bytes": 1093,
@@ -623,11 +627,19 @@
     "play-fast/index.service.worker.js": {
       "bytes": 601,
       "sha256": "8bd1be8dea1beabac4c134280a0e50bebda654b637d7ffeafb19ebbb8584fa1f"
+    },
+    "start/browser-start.js": {
+      "bytes": 5622,
+      "sha256": "c7256396f75ac89f8fda2b97608829b8bfe22b0f44fa40c7958b7ff25b179449"
+    },
+    "start/index.html": {
+      "bytes": 390,
+      "sha256": "0226e6771923bd7c85742e3b0d2e1f08f291f9061f417daa6ed9571168468531"
     }
   },
   "upstream_commit": "9fb5a2ca2d300162f9f7d3afd9ee369925d4612a",
   "content_version": 470,
   "distribution": "cpp-release",
   "asset_state_sha256": "f1cf133c12b1cd19a4172ca6eb0c1e347d710390f96ef2f42bf3dddef6bcf719",
-  "update_report_sha256": "47565fee7f2399771847554cf51a9f238855748134d0c8aab07965c124e06e9f"
+  "update_report_sha256": "84770252d3ce71bbe00bc75fb6006599c5d0ba482584b6cfc1c85fdb0fd16ff6"
 }
