@@ -8,7 +8,7 @@ Compiled distribution only. Source and runtime capability are recorded in build.
 
 Read-only frame snapshots are reused until state/perspective changes. Field ABI2 shares ordered spatial candidates before enemy movement; live combat predicates and authoritative order remain unchanged. Formal performance figures are deferred; FPS/resource/snapshot reuse counters are retained for device review.
 
-Updated to main v0.474 (runtime capability470), including mercenary notices, ranged hawk/crescent, detail and roar audio, and unified32x36 buff layout with fixed buff positions and foreground round notices. Actor ABI7 fuses frame interpolation/geometry and directly attaches current walking/flying/boss poses; field ABI3 and snapshot reuse are retained.
+Updated to main v0.481 (runtime capability475), including mercenary notices, ranged hawk/crescent, detail and roar audio, and unified32x36 buff layout with fixed buff positions and foreground round notices. Actor ABI7 fuses frame interpolation/geometry and directly attaches current walking/flying/boss poses; field ABI3 and snapshot reuse are retained.
 
 Fused frame preparation reuses generated items and shares exact allied support-floor queries. No graphics quality reduction. Device FPS requires separate verification; the CPU preparation benchmark is not a whole-frame or phone FPS claim.
 
@@ -19,3 +19,5 @@ Final source/visual audit:48 notice portraits now respect imported D3 density wi
 Implemented reviewed batching: shadow generation plus renderer-owned buffer updates and ground sort share one entry on dense frames (4 computational entries to 3). Field index rebuild and its first query also share one entry (2 to 1). Existing algorithms/precision/priority and authoritative order are retained. This does not establish recovery of the physical-phone FPS issue.
 
 Kakao sharing: use [the lightweight share entry](https://dlatkdqhd123.github.io/trifront-native-mobile-lab/start/). Kakao displays a user-tapped Chrome button or link-copy/manual Safari instructions before engine or binary downloads. Normal Chrome opens the same C++ game. Isolation activation has a15-second timeout and one automatic reload. Actual phone external-app handoff awaits device confirmation.
+
+Latest475-481 integration includes late-round growth and grade-A boss purchases, rune-result feedback/input pacing, randomized practice heroes, local match records/summary and current leaderboard/tier/hero presentation. Actor ABI7/field3, Kakao sharing and FPS/resource diagnostics remain enabled. Backend deployment is separate from this static web publication.

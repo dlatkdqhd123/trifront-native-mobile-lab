@@ -18,7 +18,7 @@
   "wasm_sha256": "281c14fd427afa7d28524b128049f4f1963ff4829a803d79dd84f10764b6d440",
   "native_library": "actor_batch-281c14fd427a.wasm",
   "play_path": "game/",
-  "main_pack": "index-02a2c7ee8064.pck",
+  "main_pack": "index-2461f969e5bf.pck",
   "asset_selection": {
     "policy": "runtime registry reference closure; constructed IDs and sheet dependencies retained",
     "selected_ids": {
@@ -525,8 +525,8 @@
     "release": "555acaddcfde759a431f326a244cb7e20209ef534f7d221b3e2f10879821d8ee",
     "debug": "2e7256717078c829ec7b02dadf9e20c490d7ae861b12903b8c7637ba50da554c"
   },
-  "source_commit": "07660c4e5140fb27ee2482c534a3ce5a2c25130e",
-  "source_inventory_sha256": "ecd0a97e9d08f9fa82781fb36fbe2ee12cad0a52dea65e40a77540f543fd2827",
+  "source_commit": "8d14d1de43139858a78729f2f24c42a1b70a9364",
+  "source_inventory_sha256": "8481367c4433096225385aec4c31743ce85c0f5620899eeff40159190a435bae",
   "files": {
     ".nojekyll": {
       "bytes": 0,
@@ -540,9 +540,9 @@
       "bytes": 5622,
       "sha256": "c7256396f75ac89f8fda2b97608829b8bfe22b0f44fa40c7958b7ff25b179449"
     },
-    "game/index-02a2c7ee8064.pck": {
-      "bytes": 37623744,
-      "sha256": "02a2c7ee80646155e88787e40779f2877795169c2e5b8057546aee6d4f1f0f7a"
+    "game/index-2461f969e5bf.pck": {
+      "bytes": 37676120,
+      "sha256": "2461f969e5bfaa407938a820562776df19b94086553c3fb87c8ae8b2e5fb79d7"
     },
     "game/index.144x144.png": {
       "bytes": 13021,
@@ -570,7 +570,7 @@
     },
     "game/index.html": {
       "bytes": 15410,
-      "sha256": "f153a9d4cc6f410e0960402fee24ce4ff724c2cacf62148d68865e2a781208b1"
+      "sha256": "3bbf71d5215284684d75d70c39ef086bd5435c1e8a0c8db5990b55f3e52f12b6"
     },
     "game/index.icon.png": {
       "bytes": 67671,
@@ -594,7 +594,7 @@
     },
     "game/index.service.worker.js": {
       "bytes": 6319,
-      "sha256": "be799fc458a78edfbeb2719ff6af454ba95d9e502d287afaa10f0fc9aa57dff8"
+      "sha256": "24cbe6bcb37b4cf5ae0527f59c87e3a7ba07d6ffdcaa9818f9c63df121fd631d"
     },
     "game/index.side.wasm": {
       "bytes": 44078870,
@@ -637,9 +637,9 @@
       "sha256": "0226e6771923bd7c85742e3b0d2e1f08f291f9061f417daa6ed9571168468531"
     }
   },
-  "upstream_commit": "9fb5a2ca2d300162f9f7d3afd9ee369925d4612a",
-  "content_version": 470,
+  "upstream_commit": "819d599e92d73955ea2b5dbf45e0d833c6c60664",
+  "content_version": 475,
   "distribution": "cpp-release",
-  "asset_state_sha256": "f1cf133c12b1cd19a4172ca6eb0c1e347d710390f96ef2f42bf3dddef6bcf719",
-  "update_report_sha256": "84770252d3ce71bbe00bc75fb6006599c5d0ba482584b6cfc1c85fdb0fd16ff6"
+  "asset_state_sha256": "423576ef2016edaf407214687a24b8359fee6a1a8dfd25fe8ef58228d0e03465",
+  "update_report_sha256": "904a361490ed7273862bdd17f904e30035f5ba3b656b461292d538d5c3df4d22"
 }
