@@ -1,27 +1,32 @@
 {
   "engine": "4.7.2-stable",
-  "contract_version": 7,
+  "contract_version": 8,
   "field_contract": 3,
   "godot_cpp": "27d9dd23c83871e0619fca5dc2cddfbfd69e926a",
   "emscripten": "emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 4.0.11 (d3432e7a2a6585331c94b041973fb16c9f332ce4)",
   "threads": false,
   "sources": {
-    "native/actor_batch/src/actor_batch.cpp": "d8bee4a5d1f52a8edf82d80f40232f286987796f52af1fb87ba1632644f556a1",
+    "native/actor_batch/src/actor_batch.cpp": "274cfbf0694dba888525817a69e5fddea1a51b1c5d8d1aafc9e38f2c030753fe",
     "native/actor_batch/src/field_batch.cpp": "5d4f583f69c7e0089b042bf4381066e226bcdfdea2f5bc3e88e4e5a048d50619",
+    "native/actor_batch/src/frame_stream.cpp": "e9d22e6d2cb171460a8bf9bf47d3a9fb11599e9aca6b33363579aed46912d1af",
     "native/actor_batch/src/field_core.hpp": "09659db73dd37d77bdad2eb5fc0386c12e55a2d30804e63c0fe8b7165cf34323",
     "native/actor_batch/src/field_spatial.hpp": "4470f5953dc9c1d03f28474123807fa9f8858f9ace22c394e68c1cd532645914",
     "native/actor_batch/SConstruct": "57a60d28ea7353a7e3b4f17b30aeaeb8c19342f3b1634719d5ca3784331b3cd9",
     "native/actor_batch/profile.json": "c0e090117d26d866c294d8253f5d103062771e6818bc5f25470399d6fa668c24",
-    "client/view/native_actor_batch.gd": "9bb53d51bd5cd6c7d2416df48c0935f8f7ddf5be8e4d4041129fd9b101b2ca44",
-    "platform/native_actor/runtime.gd": "504afae6e48e99fca1037ffe2a79aa18313141a384e93bd154c2f8c0a7b2422e"
+    "client/view/native_actor_batch.gd": "93c0ef98bc6768a56b1ca304c5b1b85806f263e6959824f6477d00c7f89ec595",
+    "platform/native_actor/runtime.gd": "94d692e08f39fcd5af6a2833ddc090ad6b2024ba42b16d8f80fb985d03c29d24"
   },
-  "wasm_sha256": "281c14fd427afa7d28524b128049f4f1963ff4829a803d79dd84f10764b6d440",
-  "native_library": "actor_batch-281c14fd427a.wasm",
+  "wasm_sha256": "9885613f895c71160e27c4e22f8bdab0779494dadc7075ab2768b5dc949e7a71",
+  "native_library": "actor_batch-9885613f895c.wasm",
   "play_path": "game/",
-  "main_pack": "index-27ca5e1f4338.pck",
+  "main_pack": "index-3be9e5c7fe38.pck",
   "asset_selection": {
     "policy": "runtime registry reference closure; constructed IDs and sheet dependencies retained",
     "selected_ids": {
+      "sfx.hire486.male_a": "runtime literal/data reference",
+      "sfx.hire486.male_b": "runtime literal/data reference",
+      "sfx.hire486.female_a": "runtime literal/data reference",
+      "sfx.hire486.female_b": "runtime literal/data reference",
       "spr.fx.rune.body484": "runtime literal/data reference",
       "spr.fx.rune.storm483": "runtime literal/data reference",
       "sfx.boss463.warning": "runtime literal/data reference",
@@ -519,32 +524,32 @@
       "assets/art/ui/gear/war_bow-v1.png",
       "assets/art/ui/gear/world_tree_branch-v1.png"
     ],
-    "included_art": 385,
-    "registered_files": 428,
-    "verified_in_pack": 385
+    "included_art": 391,
+    "registered_files": 432,
+    "verified_in_pack": 391
   },
   "templates_sha256": {
     "release": "555acaddcfde759a431f326a244cb7e20209ef534f7d221b3e2f10879821d8ee",
     "debug": "2e7256717078c829ec7b02dadf9e20c490d7ae861b12903b8c7637ba50da554c"
   },
-  "source_commit": "e4afd5e17a205f678cdc771d6ec8002f1ca283fb",
-  "source_inventory_sha256": "c37641cb024a54916592c3a636102c4e75dfa06d5743a2c8c8c79766c3491f45",
+  "source_commit": "7d55cfc7d984b0677aa1cb8c17d62f600631bd0c",
+  "source_inventory_sha256": "3220bb98073768456f4a25ebbdd40064eb90c2c04831ee0809c3bfd6fd75cba5",
   "files": {
     ".nojekyll": {
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
-    "game/actor_batch-281c14fd427a.wasm": {
-      "bytes": 238629,
-      "sha256": "281c14fd427afa7d28524b128049f4f1963ff4829a803d79dd84f10764b6d440"
+    "game/actor_batch-9885613f895c.wasm": {
+      "bytes": 277666,
+      "sha256": "9885613f895c71160e27c4e22f8bdab0779494dadc7075ab2768b5dc949e7a71"
     },
     "game/browser-start.js": {
       "bytes": 5622,
       "sha256": "c7256396f75ac89f8fda2b97608829b8bfe22b0f44fa40c7958b7ff25b179449"
     },
-    "game/index-27ca5e1f4338.pck": {
-      "bytes": 37715224,
-      "sha256": "27ca5e1f4338fb967ddc6a771801ebdfdef5a3adf9502985d3c88fd697c372de"
+    "game/index-3be9e5c7fe38.pck": {
+      "bytes": 37775692,
+      "sha256": "3be9e5c7fe38262839a834ab4a582e1a6527e48ad2cdd881ecf465c6f49d6213"
     },
     "game/index.144x144.png": {
       "bytes": 13021,
@@ -571,8 +576,8 @@
       "sha256": "5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3"
     },
     "game/index.html": {
-      "bytes": 15410,
-      "sha256": "2de6ced31744a1b24d7c6bec352f2baba7961f147a79659f946306258b69c2b5"
+      "bytes": 15721,
+      "sha256": "6571061e66778db1cc46a374e49f95af77e090014c0061dafd2220045f965dab"
     },
     "game/index.icon.png": {
       "bytes": 67671,
@@ -596,7 +601,7 @@
     },
     "game/index.service.worker.js": {
       "bytes": 6319,
-      "sha256": "a20f22fdd080e2ab1802cf989ad6d0fc0d4063c1f4d3d702336a8cfcf7e7c35d"
+      "sha256": "2a2c923baec068d5c49a6e9827a65065a294a262f29b3f51c3932c111999e042"
     },
     "game/index.side.wasm": {
       "bytes": 44078870,
@@ -639,9 +644,9 @@
       "sha256": "0226e6771923bd7c85742e3b0d2e1f08f291f9061f417daa6ed9571168468531"
     }
   },
-  "upstream_commit": "70750af645e64113ff0ff7eecf55a55a1cad3be1",
+  "upstream_commit": "e66dd21f4b91a6294b62dc64a561c82f380a4cc1",
   "content_version": 475,
   "distribution": "cpp-release",
-  "asset_state_sha256": "ff6241fc119029a7545442376b1a51000da9d4c19ccbc39709073160d2eff97f",
-  "update_report_sha256": "bdbacbf74b94913117682d498a453e61a270dc1ae8d7515fc2f8fffe8c0b14fe"
+  "asset_state_sha256": "c40e29b1c50a537b04f440fc2ccd295624face4f5cab7ed9ae48a5f5e8029675",
+  "update_report_sha256": "183f2727838ca1852a2d1a4ca23c9069b0b599c11845d42abd04ae99d6deed15"
 }

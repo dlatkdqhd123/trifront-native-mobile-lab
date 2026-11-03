@@ -131,12 +131,13 @@ if(!window.nativeActorInApp)fetch('../build.json',{cache:'no-store'}).then(r=>{i
 window.nativeActorFailure=function(message){document.getElementById('laberror').textContent=message;window.__nativeActorFailure=message};
 window.nativeActorReady=function(){window.__nativeActorStartup={ready_ms:performance.now()-window.__nativeActorLoading.started,files:window.__nativeActorLoading.files};clearInterval(nativeActorProgressTimer);document.getElementById('labfoot').textContent='화면 전환 후 5초 워밍업 · 가로 화면에서 플레이해주세요.'};
 window.nativeActorReport=function(row){
- row.browser={userAgent:navigator.userAgent,width:innerWidth,height:innerHeight,dpr:devicePixelRatio,crossOriginIsolated:window.crossOriginIsolated,visibility:document.visibilityState};
+ const canvas=document.getElementById('canvas'),canvasRect=canvas?.getBoundingClientRect();
+ row.browser={userAgent:navigator.userAgent,width:innerWidth,height:innerHeight,dpr:devicePixelRatio,crossOriginIsolated:window.crossOriginIsolated,visibility:document.visibilityState,canvas_width:canvas?.width??null,canvas_height:canvas?.height??null,canvas_css_x:canvasRect?.x??null,canvas_css_y:canvasRect?.y??null,canvas_css_width:canvasRect?.width??null,canvas_css_height:canvasRect?.height??null};
  row.js_heap_bytes=performance.memory?.usedJSHeapSize??null;row.recorded_at=new Date().toISOString();
  row.build=window.__nativeActorBuild;
  window.__nativeActorState=row;
  if(row.phase==='game_screen'&&row.samples>0&&document.visibilityState==='visible'){window.__nativeActorHistory.push(row);if(window.__nativeActorHistory.length>180)window.__nativeActorHistory.shift()}
- const status=row.mode==='cpp'?`C++ ${row.unit_batches>0?'작동 중':'대기'} · 호출 ${row.unit_batches}/${row.pose_batches}/${row.sort_batches}/${row.shadow_batches??0} · 필드 ${row.field_queries??0}`:'GDScript 작동 중';
+ const status=row.mode==='cpp'?`C++ ${row.unit_batches>0?'작동 중':'대기'} · 작업 ${row.unit_batches}/${row.pose_batches}/${row.sort_batches}/${row.shadow_batches??0} · 필드 ${row.field_queries??0}`:'GDScript 작동 중';
  document.getElementById('labmetrics').textContent=row.samples?`${status} | 최근 ${(row.recent_fps??row.fps).toFixed(1)} FPS · 누적 ${row.fps.toFixed(1)} · 평균 ${row.mean_ms.toFixed(1)} / p99 ${row.p99_ms.toFixed(1)} ms · ${row.samples}프레임`:`${status} | 워밍업 ${Math.min(5,row.elapsed_s).toFixed(0)}/5초`;
  document.getElementById('labfoot').textContent=`${row.phase} · tick ${row.tick} · 스냅샷 ${row.snapshot_builds??0}/${row.snapshot_reuses??0} · 검색 준비 ${row.spatial_index_builds??0} · 객체 ${row.objects} · 텍스처 ${(row.texture_bytes/1048576).toFixed(1)} MiB · ${row.browser.crossOriginIsolated?'격리됨':'격리 안 됨'} · 브라우저가 제공하지 않는 메모리는 0/미지원으로 기록됩니다.`;
  if(row.phase==='game_screen'){
@@ -174,7 +175,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 
 		<script>if(!window.nativeActorInApp)document.write('<script src="index.js"><\/script>');</script>
 		<script>
-const GODOT_CONFIG = {"args": [], "canvasResizePolicy": 0, "emscriptenPoolSize": 8, "ensureCrossOriginIsolationHeaders": true, "executable": "index", "experimentalVK": false, "fileSizes": {"index.wasm": 1508095, "index-27ca5e1f4338.pck": 37715224}, "focusCanvas": true, "gdextensionLibs": ["actor_batch-281c14fd427a.wasm"], "godotPoolSize": 4, "serviceWorker": "index.service.worker.js", "mainPack": "index-27ca5e1f4338.pck"};
+const GODOT_CONFIG = {"args": [], "canvasResizePolicy": 0, "emscriptenPoolSize": 8, "ensureCrossOriginIsolationHeaders": true, "executable": "index", "experimentalVK": false, "fileSizes": {"index.wasm": 1508095, "index-3be9e5c7fe38.pck": 37775692}, "focusCanvas": true, "gdextensionLibs": ["actor_batch-9885613f895c.wasm"], "godotPoolSize": 4, "serviceWorker": "index.service.worker.js", "mainPack": "index-3be9e5c7fe38.pck"};
 const GODOT_THREADS_ENABLED = false;
 const engine = window.nativeActorInApp ? null : new Engine(GODOT_CONFIG);
 
